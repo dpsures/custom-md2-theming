@@ -7,6 +7,7 @@ import { AboutComponent } from "./about/about.component";
 import { HomeComponent } from "./home/home.component";
 import { CreateTutorialComponent } from "./create-tutorial/create-tutorial.component";
 import { UserProfileComponent } from "./user-profile/user-profile.component";
+import { WeatherComponent } from "./weather/weather.component";
 
 const APP_ROUTES : Routes = [
     {path:'', redirectTo:'/trainers', pathMatch:'full'},
@@ -23,7 +24,7 @@ const APP_ROUTES : Routes = [
     imports: [MaterialModule, RouterModule.forRoot(APP_ROUTES)],
     exports: [RouterModule],
     declarations: [DashboardComponent, HeaderComponent, AboutComponent,
-    HomeComponent, CreateTutorialComponent, UserProfileComponent],
+    HomeComponent, CreateTutorialComponent, UserProfileComponent,WeatherComponent],
     providers: [],
     entryComponents:[CreateTutorialComponent, UserProfileComponent]
 })
