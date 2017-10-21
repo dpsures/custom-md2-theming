@@ -1,5 +1,9 @@
-<div>
+<div fxLayout fxLayout.gt-sm="row" fxLayout.xs="column">
   <mat-toolbar color="primary" class="mat-elevation-z6">
-    <span>Dashboard</span>
+    <span fxFlexOffset.gt-sm="5%"></span>
+    <img src="assets/dashboard.ico">
+    <button mat-button [routerLink]="['/trainers/home']"><span style="font-size: 20px;">Trainer's Tutorials</span></button>
+    <span fxFlex.gt-sm></span>
+    <button mat-button [routerLink]="['/trainers/about']">About</button>
   </mat-toolbar>
 </div>
