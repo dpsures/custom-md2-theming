@@ -1,0 +1,47 @@
+@import '~@angular/material/theming';
+@import './_variables';
+
+$mat-pink: (
+    50: #fce4ec,
+    100: #f8bbd0,
+    200: #f48fb1,
+    300: #f06292,
+    400: #ec407a,
+    500: #e91e63,
+    600: #d81b60,
+    700: #BA0163,
+    800: #ad1457,
+    900: #880e4f,
+    A100: #ff80ab,
+    A200: #ff4081,
+    A400: #f50057,
+    A700: #c51162,
+    contrast: (
+      50: $black-87-opacity,
+      100: $black-87-opacity,
+      200: $black-87-opacity,
+      300: $black-87-opacity,
+      400: $black-87-opacity,
+      500: white,
+      600: white,
+      700: $white-87-opacity,
+      800: $white-87-opacity,
+      900: $white-87-opacity,
+      A100: $black-87-opacity,
+      A200: white,
+      A400: white,
+      A700: white,
+    )
+  );
+
+$dashboard-dark-theme-primary: mat-palette($mat-pink, 700);
+$dashboard-dark-theme-accent: mat-palette($mat-light-green, 200);
+$dashboard-dark-theme-warn: mat-palette($mat-red);
+
+$dashboard-dark-theme: mat-dark-theme(
+    $dashboard-dark-theme-primary,
+    $dashboard-dark-theme-accent,
+    $dashboard-dark-theme-warn
+);
+
+@include angular-material-theme($dashboard-dark-theme);
