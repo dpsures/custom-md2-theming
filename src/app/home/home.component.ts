@@ -3,7 +3,7 @@ import { MatDialog } from "@angular/material";
 import { CreateTutorialComponent } from "../create-tutorial/create-tutorial.component";
 
 @Component({
-  selector: 'app-home',
+  selector: 'home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
