@@ -6,6 +6,7 @@ import { MaterialModule } from "./material.module";
 import { AppRoutingModule } from "./app.routing";
 
 import { AppComponent } from './app.component';
+import { BreakPointObserverService } from "./shared/services/breakpoint.service";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { AppComponent } from './app.component';
     MaterialModule,
     LayoutModule
   ],
-  providers: [],
+  providers: [BreakPointObserverService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BreakPointObserverService } from "../shared/services/breakpoint.service";
 
 @Component({
   selector: 'create-tutorial',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateTutorialComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _breakObserver : BreakPointObserverService) { }
 
   ngOnInit() {
+    this._breakObserver.currentDevice.subscribe(device => {
+      console.log('create tutorial device ----->'+device.isMobile + ' ---- '+device.isTablet+' ----- '+device.isDesktop);
+    });
   }
 
 }
