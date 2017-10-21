@@ -5,6 +5,8 @@ import { HeaderComponent } from "./header/header.component";
 import { DashboardComponent } from "./dashboard/dashboard.component";
 import { AboutComponent } from "./about/about.component";
 import { HomeComponent } from "./home/home.component";
+import { CreateTutorialComponent } from "./create-tutorial/create-tutorial.component";
+import { UserProfileComponent } from "./user-profile/user-profile.component";
 
 const APP_ROUTES : Routes = [
     {path:'', redirectTo:'/trainers', pathMatch:'full'},
@@ -21,7 +23,8 @@ const APP_ROUTES : Routes = [
     imports: [MaterialModule, RouterModule.forRoot(APP_ROUTES)],
     exports: [RouterModule],
     declarations: [DashboardComponent, HeaderComponent, AboutComponent,
-    HomeComponent],
+    HomeComponent, CreateTutorialComponent, UserProfileComponent],
     providers: [],
+    entryComponents:[CreateTutorialComponent, UserProfileComponent]
 })
 export class AppRoutingModule { }

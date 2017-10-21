@@ -3,7 +3,9 @@ import { NgModule } from '@angular/core';
 import { 
     MatToolbarModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    MatIconModule,
+    MatDialogModule
  } from "@angular/material";
  
  import { FlexLayoutModule } from "@angular/flex-layout";
@@ -13,13 +15,17 @@ import {
         MatToolbarModule,
         FlexLayoutModule,
         MatButtonModule,
-        MatCardModule
+        MatCardModule,
+        MatIconModule,
+        MatDialogModule
     ],
     exports: [
         MatToolbarModule,
         FlexLayoutModule,
         MatButtonModule,
-        MatCardModule
+        MatCardModule,
+        MatIconModule,
+        MatDialogModule
     ],
     declarations: [],
     providers: [],

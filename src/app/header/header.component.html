@@ -1,9 +1,10 @@
-<div fxLayout fxLayout.gt-sm="row" fxLayout.xs="column">
+<div fxLayout fxLayout.gt-sm="row" fxLayout.xs="column" fxLayout.sm="column">
   <mat-toolbar color="primary" class="mat-elevation-z6">
     <span fxFlexOffset.gt-sm="5%"></span>
     <img src="assets/dashboard.ico">
     <button mat-button [routerLink]="['/trainers/home']"><span style="font-size: 20px;">Trainer's Tutorials</span></button>
     <span fxFlex.gt-sm></span>
-    <button mat-button [routerLink]="['/trainers/about']">About</button>
+    <button mat-button (click)="openUserProfile()"><mat-icon>account_circle</mat-icon><span style="padding-left: 5px;padding-right: 5px;">Suresh</span><mat-icon>keyboard_arrow_down</mat-icon></button>
+    <button mat-button [routerLink]="['/trainers/about']"><mat-icon>info</mat-icon><span style="padding-left: 5px;">About</span></button>
   </mat-toolbar>
 </div>
