@@ -1,0 +1,37 @@
+<div fxLayout="row" style="padding: 20px;">
+  <mat-card fxFlex class="mat-elevation-z8">
+    <mat-horizontal-stepper [linear]="isLinear">
+      <mat-step [stepControl]="firstFormGroup">
+        <form [formGroup]="firstFormGroup">
+          <ng-template matStepLabel>Fill out your name</ng-template>
+          <mat-form-field>
+            <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+          </mat-form-field>
+          <div fxLayout="row">
+            <button mat-raised-button matStepperNext color="primary" class="mat-elevation-z6">Next</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="secondFormGroup">
+        <form [formGroup]="secondFormGroup">
+          <ng-template matStepLabel>Fill out your address</ng-template>
+          <mat-form-field>
+            <input matInput placeholder="Address" formControlName="secondCtrl" required>
+          </mat-form-field>
+          <div fxLayout="row" fxLayoutGap="20px">
+            <button mat-raised-button matStepperPrevious class="mat-elevation-z6" color="accent">Back</button>
+            <button mat-raised-button matStepperNext color="primary" class="mat-elevation-z6">Next</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Done</ng-template>
+        You are now done.
+        <div fxLayout="row" fxLayoutGap="20px">
+          <button mat-raised-button matStepperPrevious class="mat-elevation-z6" color="accent">Back</button>
+          <button mat-raised-button color="primary" [routerLink]="['/trainers/home']" class="mat-elevation-z6">Done</button>
+        </div>
+      </mat-step>
+    </mat-horizontal-stepper>
+  </mat-card>
+</div>

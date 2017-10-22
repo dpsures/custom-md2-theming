@@ -9,7 +9,8 @@ import {
     MatNativeDateModule,
     MatDatepickerModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatStepperModule
  } from "@angular/material";
  
  import { FlexLayoutModule } from "@angular/flex-layout";
@@ -25,7 +26,8 @@ import {
         MatNativeDateModule,
         MatDatepickerModule,
         MatFormFieldModule,
-        MatInputModule
+        MatInputModule,
+        MatStepperModule
     ],
     exports: [
         MatToolbarModule,
@@ -37,7 +39,8 @@ import {
         MatNativeDateModule,
         MatDatepickerModule,
         MatFormFieldModule,
-        MatInputModule
+        MatInputModule,
+        MatStepperModule
     ],
     declarations: [],
     providers: [],

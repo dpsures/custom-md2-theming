@@ -11,9 +11,13 @@ import { WeatherComponent } from "./weather/weather.component";
 import { UserProfileComponent } from "./user-profile/user-profile.component";
 import { WeatherService } from "./weather/weather.service";
 import { RequestAccessComponent } from "./request-access/request-access.component";
+import { LandingComponent } from "./landing/landing.component";
+import { SignupComponent } from "./signup/signup.component";
 
 const APP_ROUTES : Routes = [
-    {path:'', redirectTo:'/trainers', pathMatch:'full'},
+    {path:'', redirectTo:'/landing', pathMatch:'full'},
+    {path: 'landing', component: LandingComponent},
+    {path: 'signup', component: SignupComponent},
     {path:'trainers', component: DashboardComponent,
         children: [
             {path:'', redirectTo:'home', pathMatch:'full'},
@@ -28,7 +32,8 @@ const APP_ROUTES : Routes = [
     imports: [FormsModule, ReactiveFormsModule, MaterialModule, RouterModule.forRoot(APP_ROUTES)],
     exports: [RouterModule],
     declarations: [DashboardComponent, HeaderComponent, AboutComponent,
-    HomeComponent, CreateTutorialComponent, WeatherComponent, UserProfileComponent,RequestAccessComponent],
+    HomeComponent, CreateTutorialComponent, WeatherComponent, UserProfileComponent,RequestAccessComponent,
+    LandingComponent,SignupComponent],
     providers: [WeatherService],
     entryComponents:[CreateTutorialComponent, UserProfileComponent]
 })
