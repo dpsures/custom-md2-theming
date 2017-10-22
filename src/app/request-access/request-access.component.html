@@ -1,6 +1,6 @@
 <div fxLayout="row" style="font-size: 14px; padding: 20px;margin-left: 50px;" class="container-font">
     <span style="padding-right: 8px;">
-      <a style="text-decoration: none;" [routerLink]="['/home']">All Requests </a>
+      <a style="text-decoration: none;" [routerLink]="['/trainers/home']">All Requests </a>
     </span>
     <span style="padding-right: 8px;">> </span>
     <span>Grant Access</span>
@@ -103,7 +103,7 @@
             <button mat-raised-button color="accent" style="color: black;" (click)="resetForm()">
               <mat-icon>replay</mat-icon>Reset</button>
             <span fxFlex></span>
-            <button mat-raised-button color="accent" style="color: black;" [routerLink]="['/home']">
+            <button mat-raised-button color="accent" style="color: black;" [routerLink]="['/trainers/home']">
               <mat-icon>cancel</mat-icon>Cancel</button>
             <button mat-raised-button style="background-color: #cddc39" (click)="submitForm(grantAccessForm.value)">
               <mat-icon>done</mat-icon>Submit</button>
