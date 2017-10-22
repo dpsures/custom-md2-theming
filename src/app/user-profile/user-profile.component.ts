@@ -36,6 +36,8 @@ export class UserProfileComponent implements OnInit {
       }
 
       this._dialogRef.updatePosition({top: this.topPosition+'px',right: this.rightPosition+'px'});
+
+      this._dialogRef.updateSize('300px','300px');
     });
   }
 

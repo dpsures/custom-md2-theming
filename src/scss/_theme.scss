@@ -38,7 +38,7 @@ $dashboard-dark-theme-primary: mat-palette($mat-pink, 700);
 $dashboard-dark-theme-accent: mat-palette($mat-light-green, 200);
 $dashboard-dark-theme-warn: mat-palette($mat-red);
 
-$dashboard-dark-theme: mat-dark-theme(
+$dashboard-dark-theme: mat-light-theme(
     $dashboard-dark-theme-primary,
     $dashboard-dark-theme-accent,
     $dashboard-dark-theme-warn

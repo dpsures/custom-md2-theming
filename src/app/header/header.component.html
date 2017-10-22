@@ -6,6 +6,11 @@
       <span style="font-size: 20px;">Trainer's Tutorials</span>
     </button>
     <span fxFlex.gt-sm></span>
+    <button mat-button fxHide.lt-md [routerLink]="['/trainers/requestAccess']">
+      <mat-icon>pan_tool</mat-icon>
+      <span style="padding-left: 5px;padding-right: 5px;">Request Access</span>
+    </button>
+
     <button mat-button (click)="openUserProfile()" fxHide.lt-md>
       <mat-icon>account_circle</mat-icon>
       <span style="padding-left: 5px;padding-right: 5px;">Suresh</span>
@@ -22,6 +27,10 @@
   fxLayoutAlign="center" style="background: #ba0163;">
   <mat-toolbar-row class="mat-elevation-z1">
     <span fxFlex></span>
+    <button mat-button [routerLink]="['/trainers/requestAccess']">
+      <mat-icon style="color: white;">pan_tool</mat-icon>
+      <span style="padding-left: 5px;padding-right: 5px;color: white;">Request Access</span>
+    </button>
       <button mat-button (click)="openUserProfile()">
           <mat-icon style="color: white;">account_circle</mat-icon>
           <span style="padding-left: 5px;padding-right: 5px;color: white">Suresh</span>

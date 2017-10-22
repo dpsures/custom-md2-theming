@@ -5,7 +5,11 @@ import {
     MatButtonModule,
     MatCardModule,
     MatIconModule,
-    MatDialogModule
+    MatDialogModule,
+    MatNativeDateModule,
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatInputModule
  } from "@angular/material";
  
  import { FlexLayoutModule } from "@angular/flex-layout";
@@ -17,7 +21,11 @@ import {
         MatButtonModule,
         MatCardModule,
         MatIconModule,
-        MatDialogModule
+        MatDialogModule,
+        MatNativeDateModule,
+        MatDatepickerModule,
+        MatFormFieldModule,
+        MatInputModule
     ],
     exports: [
         MatToolbarModule,
@@ -25,7 +33,11 @@ import {
         MatButtonModule,
         MatCardModule,
         MatIconModule,
-        MatDialogModule
+        MatDialogModule,
+        MatNativeDateModule,
+        MatDatepickerModule,
+        MatFormFieldModule,
+        MatInputModule
     ],
     declarations: [],
     providers: [],

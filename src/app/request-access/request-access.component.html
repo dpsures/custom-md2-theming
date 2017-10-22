@@ -1,0 +1,115 @@
+<div fxLayout="row" style="font-size: 14px; padding: 20px;margin-left: 50px;" class="container-font">
+    <span style="padding-right: 8px;">
+      <a style="text-decoration: none;" [routerLink]="['/home']">All Requests </a>
+    </span>
+    <span style="padding-right: 8px;">> </span>
+    <span>Grant Access</span>
+  </div>
+  
+  <mat-card class="container-font container-form mat-elevation-z3" style="margin-left: 50px;">
+    <div fxLayout="column" fxLayoutGap="15px">
+      <div fxLayout="row">
+        <span style="font-weight: bold;">GRANT ACCESS</span>
+        <span fxFlex></span>
+        <span>
+          <small>All Fields are mandatory</small>
+        </span>
+      </div>
+  
+      <div fxLayout="column">
+        <form [formGroup]="grantAccessForm">
+          <div fxLayout="row" class="container-row">
+            <div>
+              <label fxFlex="220px">Request ID: </label>
+              <mat-form-field>
+                <input matInput formControlName="requestId" required>
+              </mat-form-field>
+            </div>
+          </div>
+  
+  
+          <div fxLayout="row" class="container-row">
+            <div>
+              <label fxFlex="220px">Requestor Name: </label>
+              <mat-form-field>
+                <input matInput formControlName="requestId" required>
+              </mat-form-field>
+            </div>
+          </div>
+  
+          <div fxLayout="row" class="container-row">
+            <div>
+              <label fxFlex="220px">Requestor Email: </label>
+              <mat-form-field>
+                <input matInput formControlName="requestorEmail" required>
+              </mat-form-field>
+            </div>
+          </div>
+  
+  
+  
+          <div fxLayout="row" class="container-row">
+            <div>
+              <label fxFlex="220px">Token ID: </label>
+              <mat-form-field>
+                <textarea matInput formControlName="tokenId" required></textarea>
+              </mat-form-field>
+            </div>
+          </div>
+  
+          <div fxLayout="row" class="container-row">
+            <div>
+              <label fxFlex="220px">Study ID: </label>
+              <mat-form-field>
+                <input matInput formControlName="studyId" required>
+              </mat-form-field>
+            </div>
+          </div>
+  
+          <div fxLayout="row" class="container-row">
+            <div>
+              <label fxFlex="220px">Expiry Time Period: </label>
+              <mat-form-field style="width: 50px;">
+                <input matInput formControlName="expiryDays" required>
+              </mat-form-field>
+              <label class="expiry-days-label">days</label>
+  
+              <label class="expiry-date-label">From:</label>
+              <mat-form-field style="width: 110px;margin-top: 10px;">
+                  <input matInput [matDatepicker]="fromPicker" formControlName="fromDate" required>
+                  <mat-datepicker-toggle matSuffix [for]="fromPicker" style="background-color: #cddc39;color: white;"></mat-datepicker-toggle>
+                  <mat-datepicker #fromPicker></mat-datepicker>
+                </mat-form-field>
+  
+              <label class="expiry-date-label">To:</label>
+              <mat-form-field style="width: 110px;margin-top: 10px;">
+                  <input matInput [matDatepicker]="toPicker" formControlName="toDate" required>
+                  <mat-datepicker-toggle matSuffix [for]="toPicker" style="background-color: #cddc39;color: white;"></mat-datepicker-toggle>
+                  <mat-datepicker #toPicker></mat-datepicker>
+                </mat-form-field>
+            </div>
+          </div>
+  
+          <div fxLayout="row" class="container-row">
+            <div>
+              <label fxFlex="220px">Sharepoint Request URL: </label>
+              <mat-form-field>
+                <textarea matInput formControlName="sharepointRequestUrl" required></textarea>
+              </mat-form-field>
+            </div>
+          </div>
+  
+          <div fxLayout="row" fxLayoutGap="20px" class="container-bootom container-row">
+            <button mat-raised-button color="accent" style="color: black;" (click)="resetForm()">
+              <mat-icon>replay</mat-icon>Reset</button>
+            <span fxFlex></span>
+            <button mat-raised-button color="accent" style="color: black;" [routerLink]="['/home']">
+              <mat-icon>cancel</mat-icon>Cancel</button>
+            <button mat-raised-button style="background-color: #cddc39" (click)="submitForm(grantAccessForm.value)">
+              <mat-icon>done</mat-icon>Submit</button>
+          </div>
+  
+        </form>
+      </div>
+    </div>
+  </mat-card>

@@ -1,0 +1,50 @@
+.container {
+    width: 850px;
+  }
+  
+  .container-form {
+    width: 900px;
+  }
+
+  .container-font {
+    font-weight: normal;
+    font-size: 15px;
+    color: #3c4242;
+  }
+  
+  .container-font label {
+    margin-top: 34px;
+  }
+  
+  .container-font .mat-form-field {
+    width: 400px;
+  }
+  
+  .container-row {
+    margin-top: -15px;
+  }
+  
+  .container-bootom {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .expiry-days-label {
+    padding-left: 10px;
+  }
+  
+  .expiry-date-label {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+    
+  .grand-access-form label{
+    color: #3c4242;
+  }
+   
+  .grand-access-title {
+    color: #3c4242;
+    font-weight: bold;
+    font-size: 18pt;
+  }
+  
