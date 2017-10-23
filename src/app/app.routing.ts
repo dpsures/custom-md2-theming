@@ -13,6 +13,9 @@ import { WeatherService } from "./weather/weather.service";
 import { RequestAccessComponent } from "./request-access/request-access.component";
 import { LandingComponent } from "./landing/landing.component";
 import { SignupComponent } from "./signup/signup.component";
+import { TrendingBlogsComponent } from "./trending-blogs/trending-blogs.component";
+import { TopTrainersComponent } from "./top-trainers/top-trainers.component";
+import { LatestTechNewsComponent } from "./latest-tech-news/latest-tech-news.component";
 
 const APP_ROUTES : Routes = [
     {path:'', redirectTo:'/landing', pathMatch:'full'},
@@ -33,7 +36,7 @@ const APP_ROUTES : Routes = [
     exports: [RouterModule],
     declarations: [DashboardComponent, HeaderComponent, AboutComponent,
     HomeComponent, CreateTutorialComponent, WeatherComponent, UserProfileComponent,RequestAccessComponent,
-    LandingComponent,SignupComponent],
+    LandingComponent,SignupComponent, TrendingBlogsComponent, TopTrainersComponent, LatestTechNewsComponent],
     providers: [WeatherService],
     entryComponents:[CreateTutorialComponent, UserProfileComponent]
 })

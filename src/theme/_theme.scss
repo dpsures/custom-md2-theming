@@ -1,5 +1,11 @@
 @import '~@angular/material/theming';
+
 @import './_variables';
+@import '../app/trending-blogs/trending-blogs.scss-theme';
+
+@mixin trending-blogs-component($theme){
+  @include trending-blogs-theme($theme);
+}
 
 $mat-pink: (
     50: #fce4ec,
@@ -34,14 +40,15 @@ $mat-pink: (
     )
   );
 
-$dashboard-dark-theme-primary: mat-palette($mat-pink, 700);
-$dashboard-dark-theme-accent: mat-palette($mat-light-green, 200);
-$dashboard-dark-theme-warn: mat-palette($mat-red);
+$dashboard-light-theme-primary: mat-palette($mat-pink, 700);
+$dashboard-light-theme-accent: mat-palette($mat-light-green, 200);
+$dashboard-light-theme-warn: mat-palette($mat-red);
 
-$dashboard-dark-theme: mat-light-theme(
-    $dashboard-dark-theme-primary,
-    $dashboard-dark-theme-accent,
-    $dashboard-dark-theme-warn
+$dashboard-light-theme: mat-light-theme(
+    $dashboard-light-theme-primary,
+    $dashboard-light-theme-accent,
+    $dashboard-light-theme-warn
 );
 
-@include angular-material-theme($dashboard-dark-theme);
+@include angular-material-theme($dashboard-light-theme);
+@include trending-blogs-component($dashboard-light-theme);
