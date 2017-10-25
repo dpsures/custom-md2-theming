@@ -11,9 +11,9 @@ import { Language } from "../shared/model/language";
 })
 export class HeaderComponent implements OnInit {
 
-  private selectedLanguage : string = '101';
+  selectedLanguage : string = '101';
 
-  private languages : Language[] = [
+  languages : Language[] = [
     {languageId : '101', languageTxt : 'English'},
     {languageId : '102', languageTxt : 'Spanish'},
     {languageId : '103', languageTxt : 'Franch'}
