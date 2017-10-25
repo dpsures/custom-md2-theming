@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { LayoutModule } from "@angular/cdk/layout";
@@ -25,6 +25,7 @@ import { BreakPointObserverService } from "./shared/services/breakpoint.service"
     ReactiveFormsModule
   ],
   providers: [BreakPointObserverService],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

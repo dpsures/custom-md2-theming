@@ -16,6 +16,15 @@
       <span style="padding-left: 5px;padding-right: 5px;">Suresh</span>
       <mat-icon>keyboard_arrow_down</mat-icon>
     </button>
+
+    <mat-form-field>
+      <mat-select [(ngModel)]="selectedLanguage">
+        <mat-option *ngFor="let language of languages" [value]="language.languageId">
+          {{ language.languageTxt }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
     <button mat-button [routerLink]="['/trainers/about']" fxHide.lt-md>
       <mat-icon>info</mat-icon>
       <span style="padding-left: 5px;">About</span>

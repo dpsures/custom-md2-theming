@@ -10,7 +10,10 @@ import {
     MatDatepickerModule,
     MatFormFieldModule,
     MatInputModule,
-    MatStepperModule
+    MatStepperModule,
+    MatSelectModule,
+    MatOptionModule
+    
  } from "@angular/material";
  
  import { FlexLayoutModule } from "@angular/flex-layout";
@@ -27,7 +30,9 @@ import {
         MatDatepickerModule,
         MatFormFieldModule,
         MatInputModule,
-        MatStepperModule
+        MatStepperModule,
+        MatSelectModule,
+        MatOptionModule
     ],
     exports: [
         MatToolbarModule,
@@ -40,7 +45,9 @@ import {
         MatDatepickerModule,
         MatFormFieldModule,
         MatInputModule,
-        MatStepperModule
+        MatStepperModule,
+        MatSelectModule,
+        MatOptionModule
     ],
     declarations: [],
     providers: [],

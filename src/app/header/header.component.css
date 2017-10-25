@@ -1,3 +1,31 @@
 img {
     height: 50px;
 }
+
+.mat-form-field-underline {
+    display: none;
+}
+
+.mat-select-value {
+    color: white;
+    width: 75% !important;
+}
+
+.mat-select {
+    width: 45% !important;
+}
+
+.mat-select-arrow {
+    color: white !important;
+    /*border-top: 0px !important;*/
+}
+
+.mat-form-field-placeholder-wrapper {
+    width: 50% !important;
+}
+
+.mat-form-field{
+    font-size: 14px;
+    margin-right: -100px;
+    margin-top: 10px;
+}
