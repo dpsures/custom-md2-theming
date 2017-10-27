@@ -1,0 +1,32 @@
+[
+    {
+        "moduleName" : "Angular 4 - Part 1",
+        "courses" : [
+            {"name": "Components","duration": "5 mins", "status": "Yet to start"},
+            {"name": "Angular Cli","duration": "3 mins", "status": "Yet to start"},
+            {"name": "Node JS","duration": "10 mins", "status": "Yet to start"},
+            {"name": "Directives","duration": "5 mins", "status": "Yet to start"},
+            {"name": "Injectable","duration": "5 mins", "status": "Yet to start"}
+        ]
+    },
+    {
+        "moduleName" : "Angular 4 - Part 2",
+        "courses" : [
+            {"name": "Routing","duration": "5 mins", "status": "Yet to start"},
+            {"name": "Type script","duration": "3 mins", "status": "Yet to start"},
+            {"name": "NG Module","duration": "10 mins", "status": "Yet to start"},
+            {"name": "Selector","duration": "5 mins", "status": "Yet to start"},
+            {"name": "Http Client module","duration": "5 mins", "status": "Yet to start"}
+        ]
+    },
+    {
+        "moduleName" : "Angular 4 - Part 3",
+        "courses" : [
+            {"name": "RXJS - Observable","duration": "5 mins", "status": "Yet to start"},
+            {"name": "Input & Output","duration": "3 mins", "status": "Yet to start"},
+            {"name": "Subject","duration": "10 mins", "status": "Yet to start"},
+            {"name": "Http Intreceptor","duration": "5 mins", "status": "Yet to start"},
+            {"name": "UI - Principle","duration": "5 mins", "status": "Yet to start"}
+        ]
+    }
+]
