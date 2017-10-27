@@ -17,6 +17,9 @@ import { SignupComponent } from "./signup/signup.component";
 import { TrendingBlogsComponent } from "./trending-blogs/trending-blogs.component";
 import { TopTrainersComponent } from "./top-trainers/top-trainers.component";
 import { LatestTechNewsComponent } from "./latest-tech-news/latest-tech-news.component";
+import { ProgramDetailsComponent } from "./program-details/program-details.component";
+import { ProgramSummaryComponent } from "./program-summary/program-summary.component";
+import { ProgramDetailsService } from "./program-details/program-details.service";
 
 const APP_ROUTES : Routes = [
     {path:'', redirectTo:'/landing', pathMatch:'full'},
@@ -27,7 +30,8 @@ const APP_ROUTES : Routes = [
             {path:'', redirectTo:'home', pathMatch:'full'},
             {path: 'home', component: HomeComponent},
             {path:'about', component: AboutComponent},
-            {path: 'requestAccess', component: RequestAccessComponent}
+            {path: 'requestAccess', component: RequestAccessComponent},
+            {path: 'program-details', component: ProgramDetailsComponent}
         ]
     }
 ];
@@ -37,8 +41,9 @@ const APP_ROUTES : Routes = [
     exports: [RouterModule],
     declarations: [DashboardComponent, HeaderComponent, AboutComponent,
     HomeComponent, CreateTutorialComponent, WeatherComponent, UserProfileComponent,RequestAccessComponent,
-    LandingComponent,SignupComponent, TrendingBlogsComponent, TopTrainersComponent, LatestTechNewsComponent],
-    providers: [WeatherService],
+    LandingComponent,SignupComponent, TrendingBlogsComponent, TopTrainersComponent, LatestTechNewsComponent,
+    ProgramSummaryComponent, ProgramDetailsComponent],
+    providers: [WeatherService, ProgramDetailsService],
     entryComponents:[CreateTutorialComponent, UserProfileComponent]
 })
 export class AppRoutingModule { }
