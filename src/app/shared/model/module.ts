@@ -2,16 +2,21 @@ import { Course } from "./course";
 
 export class Module {
 
+	private moduleID : string;
     private moduleName : string;
     private courses : Course;
 
 
-	constructor($moduleName: string, $courses: Course) {
-		this.moduleName = $moduleName;
-		this.courses = $courses;
-	}
-    
+	constructor() {}	
 
+	public get $moduleID(): string {
+		return this.moduleID;
+	}
+
+	public set $moduleID(value: string) {
+		this.moduleID = value;
+	}
+	
 	public get $moduleName(): string {
 		return this.moduleName;
 	}
@@ -20,13 +25,11 @@ export class Module {
 		this.moduleName = value;
 	}
     
-
 	public get $courses(): Course {
 		return this.courses;
 	}
 
 	public set $courses(value: Course) {
 		this.courses = value;
-	}
-    
+	}    
 }

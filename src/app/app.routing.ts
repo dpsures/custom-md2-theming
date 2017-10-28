@@ -20,6 +20,7 @@ import { LatestTechNewsComponent } from "./latest-tech-news/latest-tech-news.com
 import { ProgramDetailsComponent } from "./program-details/program-details.component";
 import { ProgramSummaryComponent } from "./program-summary/program-summary.component";
 import { ProgramDetailsService } from "./program-details/program-details.service";
+import { ModuleSubject } from "./program-details/program-details.subject";
 
 const APP_ROUTES : Routes = [
     {path:'', redirectTo:'/landing', pathMatch:'full'},
@@ -43,7 +44,7 @@ const APP_ROUTES : Routes = [
     HomeComponent, CreateTutorialComponent, WeatherComponent, UserProfileComponent,RequestAccessComponent,
     LandingComponent,SignupComponent, TrendingBlogsComponent, TopTrainersComponent, LatestTechNewsComponent,
     ProgramSummaryComponent, ProgramDetailsComponent],
-    providers: [WeatherService, ProgramDetailsService],
+    providers: [WeatherService, ProgramDetailsService, ModuleSubject],
     entryComponents:[CreateTutorialComponent, UserProfileComponent]
 })
 export class AppRoutingModule { }

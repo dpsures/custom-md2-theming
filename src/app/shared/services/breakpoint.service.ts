@@ -15,7 +15,6 @@ export class BreakPointObserverService {
      }
 
      currentDeviceState(device : Device) {
-        console.log('device ----->'+device.isMobile + ' ---- '+device.isTablet+' ----- '+device.isDesktop);
         this._deviceSource.next(device);
      }
 }

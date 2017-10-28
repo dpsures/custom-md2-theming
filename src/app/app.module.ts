@@ -6,6 +6,7 @@ import { LayoutModule } from "@angular/cdk/layout";
 import { MaterialModule } from "./material.module";
 import { AppRoutingModule } from "./app.routing";
 import { HttpClientModule } from "@angular/common/http";
+import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
 
 import { AppComponent } from './app.component';
 import { BreakPointObserverService } from "./shared/services/breakpoint.service";
@@ -22,7 +23,8 @@ import { BreakPointObserverService } from "./shared/services/breakpoint.service"
     LayoutModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    LoggerModule.forRoot({serverLoggingUrl: '', level: NgxLoggerLevel.DEBUG, serverLogLevel: NgxLoggerLevel.OFF})
   ],
   providers: [BreakPointObserverService],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
