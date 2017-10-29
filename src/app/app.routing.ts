@@ -24,6 +24,13 @@ import { ModuleSubject } from "./program-details/program-details.subject";
 import { ModuleSummaryComponent } from "./module-summary/module-summary.component";
 import { ModuleDetailsComponent } from "./module-details/module-details.component";
 import { ModuleDetailsService } from "./module-details/module-details.service";
+import { LearningMgmtComponent } from "./learning-mgmt/learning-mgmt.component";
+import { LearningHeaderComponent } from "./learning-header/learning-header.component";
+import { LearningHomeComponent } from "./learning-home/learning-home.component";
+import { UserInfo } from "./learning/shared/services/user-info.object";
+import { CourseModuleComponent } from "./course-module/course-module.component";
+import { ModuleComponent } from "./module/module.component";
+import { AddCourseComponent } from "./add-course/add-course.component";
 
 const APP_ROUTES : Routes = [
     {path:'', redirectTo:'/landing', pathMatch:'full'},
@@ -38,6 +45,13 @@ const APP_ROUTES : Routes = [
             {path: 'program-details', component: ProgramDetailsComponent},
             {path: 'module-details', component: ModuleDetailsComponent}
         ]
+    },
+    {path: 'learning', component: LearningMgmtComponent,
+        children: [
+            {path: '', redirectTo: '/home', pathMatch: 'full'},
+            {path: 'home', component: LearningHomeComponent},
+            {path: 'add-course', component: AddCourseComponent}
+        ]
     }
 ];
 
@@ -47,8 +61,10 @@ const APP_ROUTES : Routes = [
     declarations: [DashboardComponent, HeaderComponent, AboutComponent,
     HomeComponent, CreateTutorialComponent, WeatherComponent, UserProfileComponent,RequestAccessComponent,
     LandingComponent,SignupComponent, TrendingBlogsComponent, TopTrainersComponent, LatestTechNewsComponent,
-    ProgramSummaryComponent, ProgramDetailsComponent, ModuleSummaryComponent, ModuleDetailsComponent],
-    providers: [WeatherService, ProgramDetailsService, ModuleSubject, ModuleDetailsService],
+    ProgramSummaryComponent, ProgramDetailsComponent, ModuleSummaryComponent, ModuleDetailsComponent,
+    LearningHeaderComponent, LearningHomeComponent, LearningMgmtComponent, ModuleComponent, CourseModuleComponent,
+    AddCourseComponent],
+    providers: [WeatherService, ProgramDetailsService, ModuleSubject, ModuleDetailsService, UserInfo],
     entryComponents:[CreateTutorialComponent, UserProfileComponent]
 })
 export class AppRoutingModule { }
