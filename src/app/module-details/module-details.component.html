@@ -1,0 +1,22 @@
+<div fxLayout="row" class="details-container" fxLayoutAlign="start">
+  <span fxFlexOffset="1%"></span>
+  <a [routerLink]="['/trainers/home']"><span style="font-size: 15px;">Back to Dashboard</span></a>
+</div>
+
+<div fxLayout="row" fxLayoutAlign="end" style="padding: 20px;" fxLayoutGap="10%">
+  <button mat-raised-button style="border-radius: 10px;">Previous</button>
+  <button mat-raised-button color="accent">Next</button>
+  <button mat-raised-button color="primary" (click)="addModule()">Add module</button>
+</div>
+
+<div fxLayout="column">
+  <mat-card>
+    <!-- <div fxLayout="row" fxLayoutAlign="center">
+      <img src="/assets/angular-4.png" style="height: 200px;">
+    </div> -->
+
+    <div fxLayout="row" fxLayoutAlign="center">
+      <button mat-raised-button color="primary" (click)="addModule()"></button>
+    </div>
+  </mat-card>
+</div>

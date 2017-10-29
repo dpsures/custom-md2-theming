@@ -21,6 +21,9 @@ import { ProgramDetailsComponent } from "./program-details/program-details.compo
 import { ProgramSummaryComponent } from "./program-summary/program-summary.component";
 import { ProgramDetailsService } from "./program-details/program-details.service";
 import { ModuleSubject } from "./program-details/program-details.subject";
+import { ModuleSummaryComponent } from "./module-summary/module-summary.component";
+import { ModuleDetailsComponent } from "./module-details/module-details.component";
+import { ModuleDetailsService } from "./module-details/module-details.service";
 
 const APP_ROUTES : Routes = [
     {path:'', redirectTo:'/landing', pathMatch:'full'},
@@ -32,7 +35,8 @@ const APP_ROUTES : Routes = [
             {path: 'home', component: HomeComponent},
             {path:'about', component: AboutComponent},
             {path: 'requestAccess', component: RequestAccessComponent},
-            {path: 'program-details', component: ProgramDetailsComponent}
+            {path: 'program-details', component: ProgramDetailsComponent},
+            {path: 'module-details', component: ModuleDetailsComponent}
         ]
     }
 ];
@@ -43,8 +47,8 @@ const APP_ROUTES : Routes = [
     declarations: [DashboardComponent, HeaderComponent, AboutComponent,
     HomeComponent, CreateTutorialComponent, WeatherComponent, UserProfileComponent,RequestAccessComponent,
     LandingComponent,SignupComponent, TrendingBlogsComponent, TopTrainersComponent, LatestTechNewsComponent,
-    ProgramSummaryComponent, ProgramDetailsComponent],
-    providers: [WeatherService, ProgramDetailsService, ModuleSubject],
+    ProgramSummaryComponent, ProgramDetailsComponent, ModuleSummaryComponent, ModuleDetailsComponent],
+    providers: [WeatherService, ProgramDetailsService, ModuleSubject, ModuleDetailsService],
     entryComponents:[CreateTutorialComponent, UserProfileComponent]
 })
 export class AppRoutingModule { }
