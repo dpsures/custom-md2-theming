@@ -31,6 +31,13 @@ import { UserInfo } from "./learning/shared/services/user-info.object";
 import { CourseModuleComponent } from "./course-module/course-module.component";
 import { ModuleComponent } from "./module/module.component";
 import { AddCourseComponent } from "./add-course/add-course.component";
+import { ModuleHomeComponent } from "./module-pagination/module-home/module-home.component";
+import { ModuleDashboardComponent } from "./module-pagination/module-dashboard/module-dashboard.component";
+import { ModuleHeaderComponent } from "./module-pagination/module-header/module-header.component";
+import { CoursesComponent } from "./module-pagination/courses/courses.component";
+import { ModulesComponent } from "./module-pagination/modules/modules.component";
+import { ModuleHomeService } from "./module-pagination/module-home/module-home.service";
+import { ModulesPagination } from "./module-pagination/shared/subject/modules.subject";
 
 const APP_ROUTES : Routes = [
     {path:'', redirectTo:'/landing', pathMatch:'full'},
@@ -52,6 +59,13 @@ const APP_ROUTES : Routes = [
             {path: 'home', component: LearningHomeComponent},
             {path: 'add-course', component: AddCourseComponent}
         ]
+    },
+    {path: 'module', component: ModuleDashboardComponent, 
+        children: [
+            {path: '', redirectTo: '/home', pathMatch: 'full'},
+            {path: 'home', component: ModuleHomeComponent},
+            {path: 'details', component: CoursesComponent}
+        ]
     }
 ];
 
@@ -63,8 +77,9 @@ const APP_ROUTES : Routes = [
     LandingComponent,SignupComponent, TrendingBlogsComponent, TopTrainersComponent, LatestTechNewsComponent,
     ProgramSummaryComponent, ProgramDetailsComponent, ModuleSummaryComponent, ModuleDetailsComponent,
     LearningHeaderComponent, LearningHomeComponent, LearningMgmtComponent, ModuleComponent, CourseModuleComponent,
-    AddCourseComponent],
-    providers: [WeatherService, ProgramDetailsService, ModuleSubject, ModuleDetailsService, UserInfo],
+    AddCourseComponent, ModuleHomeComponent, ModuleDashboardComponent, ModulesComponent, CoursesComponent, ModuleHeaderComponent],
+    providers: [WeatherService, ProgramDetailsService, ModuleSubject, ModuleDetailsService, UserInfo,
+    ModuleHomeService, ModulesPagination],
     entryComponents:[CreateTutorialComponent, UserProfileComponent]
 })
 export class AppRoutingModule { }

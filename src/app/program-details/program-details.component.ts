@@ -40,15 +40,6 @@ export class ProgramDetailsComponent implements OnInit, OnChanges {
 
   getModules(){
     this._logger.info('modules details in program details ---->'+JSON.stringify(this._moduleSubject.getdata()));
-    this._moduleSubject.getdata().push(this.getNewModule());
-  }
-
-  getNewModule() : Module{
-    let module = new Module();
-    module.$moduleID = "Part - 4";
-    module.$moduleName = "RXJS - With Angular 4";
-    let course = new Course("RxJS - Subject", "15 mins", "Not yet start");
-    module.$courses = course;
-    return module;
+    //this._moduleSubject.getdata().push(this.getNewModule());
   }
 }

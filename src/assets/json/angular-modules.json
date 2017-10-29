@@ -1,5 +1,6 @@
 [
     {
+        "sequenceNbr" : 1,
         "moduleID" : "part-1",
         "moduleName" : "Angular 4 - Part 1",
         "courses" : [
@@ -11,6 +12,7 @@
         ]
     },
     {
+        "sequenceNbr" : 2,
         "moduleID" : "part-2",
         "moduleName" : "Angular 4 - Part 2",
         "courses" : [
@@ -22,6 +24,7 @@
         ]
     },
     {
+        "sequenceNbr" : 3,
         "moduleID" : "part-3",
         "moduleName" : "Angular 4 - Part 3",
         "courses" : [

@@ -1,0 +1,9 @@
+<div fxLayout="row">
+  <span><strong>{{_currentModule.moduleName}}</strong></span>
+</div>
+
+<div *ngFor="let course of _currentModule.courses">
+  <span><small>{{course.name}}</small></span>
+  <span><small>{{course.duration}}</small></span>
+  <span><small>{{course.status}}</small></span>
+</div>

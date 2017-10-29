@@ -2,34 +2,44 @@ import { Course } from "./course";
 
 export class Module {
 
-	private moduleID : string;
-    private moduleName : string;
-    private courses : Course;
+	sequenceNbr : number;
+	moduleID : string;
+    moduleName : string;
+    courses : Course;
 
 
 	constructor() {}	
 
-	public get $moduleID(): string {
+	public getModuleID(): string {
 		return this.moduleID;
 	}
 
-	public set $moduleID(value: string) {
+	public setModuleID(value: string) {
 		this.moduleID = value;
 	}
 	
-	public get $moduleName(): string {
+	public getModuleName(): string {
 		return this.moduleName;
 	}
 
-	public set $moduleName(value: string) {
+	public setModuleName(value: string) {
 		this.moduleName = value;
 	}
     
-	public get $courses(): Course {
+	public getCourses(): Course {
 		return this.courses;
 	}
 
-	public set $courses(value: Course) {
+	public setCourses(value: Course) {
 		this.courses = value;
 	}    
+
+	public getSequenceNbr(): number {
+		return this.sequenceNbr;
+	}
+
+	public setSequenceNbr(value: number) {
+		this.sequenceNbr = value;
+	}
+
 }

@@ -1,0 +1,19 @@
+<div fxLayout="row" style="padding: 30px;" fxLayoutGap="30px" fxLayoutAlign="end">
+  <button mat-raised-button ng-show="showPrevious()" (click)="getNextValue(_current)">Previous</button>
+  <button mat-raised-button color="accent" ng-show="showNext()" (click)="getNextValue(_current)">Next</button>
+</div>
+
+<div fxLayout="row" style="padding: 20px;">
+  <mat-card class="courses-card mat-elevation-z8">
+    <div fxLayout="row" fxLayoutAlign="end" fxLayoutGap="20px">
+      <span><small>{{_current}} of {{_total}}</small></span>
+    </div>
+
+    <modules></modules>
+  </mat-card>
+</div>
+
+<div fxLayout="row" style="padding: 30px;" fxLayoutGap="30px" fxLayoutAlign="end">
+    <button mat-raised-button ng-show="showPrevious()" (click)="getNextValue(_current)">Previous</button>
+    <button mat-raised-button color="accent" ng-show="showNext()" (click)="getNextValue(_current)">Next</button>
+  </div>
