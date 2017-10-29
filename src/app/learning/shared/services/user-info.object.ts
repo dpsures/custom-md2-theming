@@ -1,12 +1,10 @@
 import { BehaviorSubject } from "rxjs/BehaviorSubject";
 import { User } from "../model/user.info";
 
-const userInfo = new BehaviorSubject<User>(null);
-
 export class UserInfo {
-    user = userInfo;
+    user =  new BehaviorSubject<User>(null);;
 
-    changes = userInfo.asObservable();
+    changes = this.user.asObservable();
 
     getUser(){
         return this.user.value;
